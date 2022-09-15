@@ -1,0 +1,623 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Jacobs Landscape Poster
+% LaTeX Template
+% Version 1.1 (14/06/14)
+%
+% Created by:
+% Computational Physics and Biophysics Group, Jacobs University
+% https://teamwork.jacobs-university.de:8443/confluence/display/CoPandBiG/LaTeX+Poster
+%
+% Further modified by:
+% Nathaniel Johnston (nathaniel@njohnston.ca)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[final]{beamer}
+
+% Use the beamerposter package for laying out the poster
+\usepackage[scale=1.24,orientation=portrait]{beamerposter}
+% \usepackage[scale=1.24,orientation=landscape]{beamerposter}
+
+\usetheme{confposter} % Use the confposter theme supplied with this template
+
+\usepackage{wrapfig} % Use for wrapping figures
+
+\usepackage[super,numbers]{natbib} % Use for fine-tunning the captions
+
+
+%% Define the paths to the Mendeley library
+\newcommand\mendlibrary{C:/Users/jeffrey.neyhart/Documents/Literature/MendeleyLibrary/library}
+
+
+
+%% Configure code blocks
+\usepackage{listings} % Use for code blocks
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+% \usepackage{biblatex} % Bibliography
+
+\setbeamercolor{block title}{fg=greenset1,bg=white} % Colors of the block titles
+\setbeamercolor{block body}{fg=black,bg=white} % Colors of the body of blocks
+\setbeamercolor{block alerted title}{fg=white,bg=blueset1!70} % Colors of the highlighted block titles
+\setbeamercolor{block alerted body}{fg=black,bg=blueset1!10} % Colors of the body of highlighted blocks
+
+% Many more colors are available for use in beamerthemeconfposter.sty
+
+%-----------------------------------------------------------
+
+% Define the column widths and overall poster size
+% To set effective sepwid, onecolwid and twocolwid values, first choose how many columns you want and how much separation you want between columns
+% In this template, the separation width chosen is 0.02 of the paper width and a 3-column layout
+% onecolwid should therefore be (1-(ncol + 1)*sepwid)/ncol e.g. (1-(3+1)*0.024)/3 = 0.3013333
+% Set twocolwid to be (2*onecolwid)+sepwid = 0.6266666
+% Set threecolwid to be (3*onecolwid)+2*sepwid = 0.9279999
+
+\newlength{\sepwid}
+\newlength{\onecolwid}
+\newlength{\twocolwid}
+\newlength{\threecolwid}
+
+%% Poster size
+\setlength{\paperwidth}{44in} % A0 width: 46.8in
+\setlength{\paperheight}{44in} % A0 height: 33.1in
+
+
+\setlength{\sepwid}{0.024\paperwidth} % Separation width (white space) between columns
+\setlength{\onecolwid}{0.3013333\paperwidth} % Width of one column
+\setlength{\twocolwid}{0.6266666\paperwidth} % Width of two columns
+\setlength{\threecolwid}{0.9279999\paperwidth} % Width of three columns
+\setlength{\topmargin}{-0.5in} % Reduce the top margin size
+%-----------------------------------------------------------
+
+\usepackage{graphicx}  % Required for including images
+
+\usepackage{booktabs} % Top and bottom rules for tables
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{Identification of Candidate Abiotic Stress Tolerance Loci in Wild Cranberry Using Environmental Association} % Poster title
+% Add \\ to induce new line
+
+\vspace{1cm}
+
+\author{Jeffrey L. Neyhart\textsuperscript{1*}, Michael Kantar\textsuperscript{2}, Joseph Kawash\textsuperscript{1}, James Polashock\textsuperscript{1}, and Nicholi Vorsa\textsuperscript{3}} % Author(s)
+
+\institute{
+\textsuperscript{1}USDA-ARS, Genetic Improvement for Fruits and Vegetables Laboratory, \textsuperscript{2}Department of Tropical Plant and Soil Sciences, University of Hawai'i at Mānoa, and \textsuperscript{3}Department of Plant Biology, Rutgers University}
+
+% *Contact: Email - \href{mailto:jeffrey.neyhart@usda.gov}{jeffrey.neyhart@usda.gov}
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\addtobeamertemplate{block end}{}{\vspace*{2ex}} % White space under blocks
+\addtobeamertemplate{block alerted end}{}{\vspace*{2ex}} % White space under highlighted (alert) blocks
+
+\setlength{\belowcaptionskip}{2ex} % White space under figures
+\setlength\belowdisplayshortskip{2ex} % White space under equations
+
+\begin{frame}[t] % The whole poster is enclosed in one beamer frame
+
+\begin{columns}[t] % The whole poster consists of three major columns, the second of which is split into two columns twice
+% the [t] option aligns each column's content to the top
+
+%----------------------------------------------------------------------------------------
+
+\begin{column}{\sepwid}\end{column} % Empty spacer column
+
+\begin{column}{\onecolwid} % The first column
+
+
+%----------------------------------------------------------------------------------------
+%	TAKEAWAYS
+%----------------------------------------------------------------------------------------
+
+\setbeamercolor{block alerted title}{fg=white,bg=orangeset1!70} % Change the alert block title colors
+\setbeamercolor{block alerted body}{fg=black,bg=orangeset1!10} % Change the alert block body colors
+
+\begin{alertblock}{\Large{Takeaways}}
+
+% \begin{large}
+\begin{itemize}
+  \item \textbf{Environmental association may help identify abiotic stress-adaptive genetic variation in wild cranberry}
+  \vspace{0.5cm}
+  \item \textbf{We detected 143 associations between marker loci and environmental variables}
+  \vspace{0.5cm}
+  \item \textbf{Potential heat, cold, and soil pH stress tolerance loci were identified at low frequency and are targets for selection}
+\end{itemize}
+% \end{large}
+
+
+\end{alertblock}
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION
+%----------------------------------------------------------------------------------------
+
+\begin{block}{Introduction}
+
+
+%% Text
+Abiotic stresses such as heat and frost threaten production of quality cranberry (\textit{Vaccinium macrocarpon} Aiton.) fruit.
+
+\vspace{0.5cm}
+
+Wild cranberry germplasm may contain genetic variation for tolerance to these abiotic stresses.
+
+\vspace{0.5cm}
+
+Identifying genomic regions associated with adaptation to environments would facilitate the targeted use of wild germplasm in breeding programs.
+
+\vspace{0.5cm}
+
+\textbf{Environmental association analysis} correlates allele frequencies in natural populations with environmental factors \cite{Walsh2018}. This can help identify genomic regions potentially underlying adaptive variation to abiotic stresses \cite{Yoder2014, Anderson2016, Lei2019}.
+
+\vspace{0.5cm}
+
+\textbf{Objective:} Use environmental association to identify genomic regions associated with local environmental factors in wild cranberry populations.
+
+
+\end{block}
+
+\vspace{2cm}
+
+
+% %----------------------------------------------------------------------------------------
+% %	OBJECTIVES OR QUESTIONS
+% %----------------------------------------------------------------------------------------
+%
+% % Set the color
+% \setbeamercolor{block alerted title}{fg=white,bg=blueset1!70} % Change the alert block title colors
+% \setbeamercolor{block alerted body}{fg=black,bg=blueset1!10} % Change the alert block body colors
+%
+% \begin{alertblock}{\large{Objective}}
+%
+% \begin{itemize}
+%   \item{\textbf{Identify genomic regions associated with local environmental factors in wild cranberry populations.}}
+%   % \item{\textbf{Determine candidate abiotic stress tolerance loci as potential selection targets.}}
+%   % \item \textbf{What genomic regions are associated with local environmental conditions in wild cranberry?}
+%   % \item What is the frequency and occurrance of putatively adaptive loci in native cranberry selections?
+% \end{itemize}
+%
+%
+% \end{alertblock}
+
+
+%----------------------------------------------------------------------------------------
+%	MATERIALS AND MATERIALS
+%----------------------------------------------------------------------------------------
+
+\begin{block}{Materials and Methods}
+
+We used a collection of 111 wild cranberry individuals sampled from 17 locations (populations) between 1991 and 2000.
+
+
+% Figure with sampling locations
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.75\linewidth]{figures/figure2.jpg}
+  \end{center}
+\end{figure}
+
+\vspace{1cm}
+
+4,582 SNP marker genotypes were obtained using genotyping-by-sequencing \cite{Diaz-Garcia2020}.
+
+
+\vspace{1cm}
+
+We obtained bioclimatic data (19 WorldClim \cite{Hijmans2005} variables) and soil data (20 SoilGrids \cite{Hengl2014} variables) for each cranberry population.
+
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{lcl}
+\toprule
+\textbf{Category} & \textbf{$N_{Variable}$} & \textbf{Example Variables}\\
+\midrule
+Geography & 3 & Elevation, Latitude, Longitude\\
+Temperature & 11 & Annual Mean Temperature, Mean Diurnal
+Range\\
+Precipitation & 8 & Annual Precipitation, Precipitation of
+Wettest Month\\
+Soil & 20 & Bulk Density Subsoil, pH Topsoil, \% Sand topsoil\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\vspace{2cm}
+
+We conducted an environmental association using a mixed-model framework (similar to traditional genomewide association studies):
+
+% \begin{center}
+% \begin{Large}
+% $ \mathbf{y = Sa + Xb + Zu + e} $
+% \end{Large}
+% \end{center}
+
+% Figure with sampling locations
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.9\linewidth]{figures/eaa_model1.jpg}
+  \end{center}
+\end{figure}
+
+
+% End the M&M block
+\end{block}
+
+
+
+%----------------------------------------------------------------------------------------
+
+\end{column} % End of the first column (i.e. Introduction, objectives, and methods)
+
+%----------------------------------------------------------------------------------------
+
+% Begin the results columns
+
+\begin{column}{\sepwid}\end{column} % Empty spacer column
+
+\begin{column}{\twocolwid} % Begin a column which is two columns wide (column 2)
+
+
+% Removing the two-columns within the middle column structure
+% \begin{columns}[t,totalwidth=\twocolwid] % Split up the two columns wide column
+%
+% \begin{column}{\onecolwid}\vspace{-.6in} % The first column within column 2 (column 2.1)
+
+%----------------------------------------------------------------------------------------
+%	RESULTS
+%----------------------------------------------------------------------------------------
+
+\begin{block}{Results}
+
+% Now split into two columns
+\begin{columns}[t,totalwidth=\twocolwid] % Split up the two columns wide column
+
+
+\begin{column}{\onecolwid} % The first column within column 2 (column 2.1)
+
+%----------------------------------------------------------------------------------------
+
+%% Figure of the first example
+
+\vspace{0.5cm}
+
+%% Figure 3a
+
+\begin{center}
+\textbf{Example 1: chromosome 4 region associated with multiple temperature variables}
+\end{center}
+
+\begin{center}
+\begin{figure}
+  \includegraphics[width=1\linewidth]{figures/Figure3a.jpg}
+\end{figure}
+\end{center}
+
+\vspace{2cm}
+
+
+The \textbf{A} marker allele is associated with colder temperatures and wider temperature ranges.
+
+%% Figure 3b
+
+\begin{center}
+\begin{figure}
+  \includegraphics[width=1\linewidth]{figures/Figure3b.jpg}
+\end{figure}
+\end{center}
+
+
+\vspace{2cm}
+
+
+This favorable allele is at low frequency among wild cranberry populations.
+
+%% Figure 3c
+
+\begin{center}
+\begin{figure}
+  \includegraphics[width=1\linewidth]{figures/Figure3c.jpg}
+\end{figure}
+\end{center}
+
+
+
+%----------------------------------------------------------------------------------------
+
+\end{column} % End of column 2.1
+
+\begin{column}{\onecolwid} % The second column within column 2 (column 2.2)
+
+%----------------------------------------------------------------------------------------
+
+%% Figure 4
+
+\vspace{0.5cm}
+
+
+\begin{center}
+\textbf{Example 2: genomic regions associated with soil characteristics}
+\end{center}
+
+
+A low-frequency allele on chromosome 2 is associated with reduced topsoil sand content.
+
+
+%% Figure 4a
+\begin{center}
+\begin{figure}
+  \includegraphics[width=1\linewidth]{figures/Figure4a.jpg}
+\end{figure}
+\end{center}
+
+% Add some space
+\vspace{1cm}
+
+%% Figure 4b
+\begin{center}
+\begin{figure}
+  \includegraphics[width=1\linewidth]{figures/Figure4b.jpg}
+\end{figure}
+\end{center}
+
+
+
+\vspace{3cm}
+
+A chromosome 3 locus is associated with soil pH; the allele associated with more alkaline soil is at low frequency in multiple cranberry populations.
+
+
+%% Figure 5a
+\begin{center}
+\begin{figure}
+  \includegraphics[width=1\linewidth]{figures/Figure5a.jpg}
+\end{figure}
+\end{center}
+
+% Add some space
+\vspace{1cm}
+
+%% Figure 5b
+\begin{center}
+\begin{figure}
+  \includegraphics[width=1\linewidth]{figures/Figure5b.jpg}
+\end{figure}
+\end{center}
+
+
+
+%% Add some space
+\vspace{2cm}
+
+
+
+%% Figure of the second module
+\begin{alertblock}{Summary of environmental associations}
+
+\begin{itemize}
+  \item{143 marker associations were detected for 36 environmental variables}
+  \item{74 unique markers across all 12 chromosomes were associated with bioclimatic variables}
+  \item{5 markers were associated with $\ge$ 5 variables}
+\end{itemize}
+
+\end{alertblock}
+
+
+%----------------------------------------------------------------------------------------
+
+\end{column} % End of column 2.2
+
+\end{columns} % End of the split of column 2
+
+
+%-------------------------------
+
+% % Insert an alert block that spans the whole width
+%
+% % Set the color
+% \setbeamercolor{block alerted title}{fg=white,bg=orangeset1!70} % Change the alert block title colors
+% \setbeamercolor{block alerted body}{fg=black,bg=orangeset1!10} % Change the alert block body colors
+%
+% \begin{alertblock}{}
+%
+% % Divide into columns
+% % Now split into two columns
+% \begin{columns}[t,totalwidth=\twocolwid] % Split up the two columns wide column
+%
+% \begin{column}{\onecolwid} %
+%
+% %%% Fill in here
+%
+% \end{column} % End of column
+%
+% %%-----------------------------------
+%
+% \begin{column}{\onecolwid} % The second column within column 2 (column 2.2)
+%
+% %%% Fill in here
+%
+%
+% \end{column} % End of column
+%
+% \end{columns} % End of the split of column
+%
+% \end{alertblock}
+
+%--------------------------------
+
+
+
+% End the results block
+\end{block}
+
+%----------------------------
+
+
+
+%% Add some space
+\vspace{0cm}
+
+
+
+%----------------------------------------------------------------------------------------
+% Split into columns
+\begin{columns}[t,totalwidth=\twocolwid] % Split up the two columns wide column
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	DISCUSSION/CONCLUSIONS
+%----------------------------------------------------------------------------------------
+
+\begin{column}{1\onecolwid}
+
+% Set the color
+\setbeamercolor{block alerted title}{fg=white,bg=orangeset1!70} % Change the alert block title colors
+\setbeamercolor{block alerted body}{fg=black,bg=orangeset1!10} % Change the alert block body colors
+
+\begin{alertblock}{Implications for cranberry improvement}
+
+\begin{large}
+\begin{itemize}
+  \item{We identified genomic regions associated with environmental factors related to important cranberry abiotic stresses.}
+  \item{Low-frequency alleles favorably associated with abiotic stresses are ideal targets for selection.}
+  \item{Individuals possessing these alleles are candidates for pre-breeding germplasm.}
+\end{itemize}
+\end{large}
+
+
+
+\end{alertblock}
+
+
+\end{column}
+
+
+
+%----------------------------------------------------------------------------------------
+
+%% Open an Acknowledgements/Reference column
+
+\begin{column}{1\onecolwid}
+
+
+
+%----------------------------------------------------------------------------------------
+%	ACKNOWLEDGEMENTS
+%----------------------------------------------------------------------------------------
+
+
+% Change the font of the block title for the next two sections
+% \setbeamerfont{block title}{size=\small}
+
+\begin{block}{\large{Acknowledgements}}
+
+\begin{footnotesize}
+
+Thanks go to Jennifer Johnson-Cicalese for helpful input and to Juan Zelapa and Eric Wiesman for providing the raw genotyping-by-sequencing reads.
+
+\end{footnotesize}
+
+\end{block}
+
+
+%----------------------------------------------------------------------------------------
+%	REFERENCES
+%----------------------------------------------------------------------------------------
+
+\begin{block}{\large{References}}
+
+% \nocite{*} % Insert publications even if they are not cited in the poster
+% ^ removed this so list only those publications that are cited
+
+% \setbeamercolor{
+
+\begin{tiny}
+
+\bibliographystyle{supporting_files/posterbibstyle}
+\bibliography{\mendlibrary}
+
+
+\end{tiny}
+
+% End the reference block
+\end{block}
+
+
+% %----------------------------------------------------------------------------------------
+% %	CONTACT INFORMATION
+% %----------------------------------------------------------------------------------------
+%
+% \setbeamercolor{block alerted title}{fg=white,bg=orangeset1!70} % Change the alert block title colors
+% \setbeamercolor{block alerted body}{fg=black,bg=orangeset1!10} % Change the alert block body colors
+%
+% \begin{alertblock}{\large{\textsuperscript{*}Contact Information}}
+%
+% \begin{itemize}
+% \item Email: \href{mailto:neyha001@umn.edu}{neyha001@umn.edu}
+% \item Twitter: \href{https://twitter.com/neyhartje}{@neyhartje}
+% \item Web: \href{http://smithlab.cfans.umn.edu/}{smithlab.cfans.umn.edu}
+% \end{itemize}
+%
+% \end{alertblock}
+
+
+%----------------------------------------------------------------------------------------
+% End the acknowlegements/references column
+\end{column}
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+% End the two bottom columns
+\end{columns}
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+% End the second main column
+\end{column} % End of the third column
+%----------------------------------------------------------------------------------------
+
+
+
+\end{columns} % End of all the columns in the poster
+
+\end{frame} % End of the enclosing frame
+
+\end{document} % End the poster document
